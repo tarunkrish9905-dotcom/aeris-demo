@@ -1,0 +1,5 @@
+# SYNTHETIC NON-OPERATIONAL FIXTURE WITH MALFORMED YAML SYNTAX
+procedure_requirement_profile:
+  profile_id: "SYNTH-MALFORMED"
+  document_id: [unclosed list bracket
+  document_version: 1.0.0

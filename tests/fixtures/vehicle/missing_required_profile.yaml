@@ -1,0 +1,4 @@
+# Synthetic test fixture for vehicle profile with missing required fields (NOT OPERATIONAL)
+vehicle_profile:
+  profile_id: PROF-01
+  name: "Incomplete Profile"

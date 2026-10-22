@@ -1,0 +1,59 @@
+# Synthetic test fixture for valid engineering limit profile (NOT OPERATIONAL)
+engineering_limit_profile:
+  limit_profile_id: LIM-PROF-AERO-01
+  vehicle_id: AC-AERO-X1
+  profile_id: PROF-AERO-01
+  profile_version: "1.0.0"
+  name: "Synthetic Aero Testbed Limits"
+  description: "Synthetic limit profile for testing and validation."
+  source_reference: "DOC-SYNTH-LIMITS-01"
+  limits:
+    - limit_id: LIM-SPD-WARN
+      parameter_id: airspeed
+      limit_type: UPPER_BOUND
+      severity: WARNING
+      upper_bound: 250.0
+      unit: kts
+      vehicle_id: AC-AERO-X1
+      profile_id: PROF-AERO-01
+      profile_version: "1.0.0"
+      source_reference: "AFM-SEC-2-SYNTH"
+      description: "Synthetic maximum operating airspeed limit."
+    - limit_id: LIM-SPD-CAUT
+      parameter_id: airspeed
+      limit_type: UPPER_BOUND
+      severity: CAUTION
+      upper_bound: 220.0
+      unit: kts
+      vehicle_id: AC-AERO-X1
+      profile_id: PROF-AERO-01
+      profile_version: "1.0.0"
+      source_reference: "AFM-SEC-2-SYNTH"
+      description: "Synthetic caution airspeed boundary."
+    - limit_id: LIM-ALT-BAND
+      parameter_id: altitude
+      limit_type: BAND
+      severity: EXCEEDANCE
+      lower_bound: 1000.0
+      upper_bound: 25000.0
+      unit: ft
+      vehicle_id: AC-AERO-X1
+      profile_id: PROF-AERO-01
+      profile_version: "1.0.0"
+      source_reference: "AFM-SEC-2-SYNTH"
+      description: "Synthetic operational altitude band."
+    - limit_id: LIM-SPD-FLAPS-FULL
+      parameter_id: airspeed
+      limit_type: UPPER_BOUND
+      severity: WARNING
+      upper_bound: 140.0
+      unit: kts
+      vehicle_id: AC-AERO-X1
+      profile_id: PROF-AERO-01
+      profile_version: "1.0.0"
+      configuration_id: CONF-FLAPS-FULL
+      source_reference: "AFM-SEC-2-SYNTH"
+      description: "Synthetic flap placard speed in full configuration."
+  metadata:
+    synthetic: true
+    testbed: "X-1"

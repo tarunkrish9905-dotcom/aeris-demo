@@ -1,0 +1,13 @@
+parameters:
+  - parameter_id: test_speed
+    display_name: Test Speed
+    description: Semantic definition of test speed
+    physical_quantity: velocity
+    data_type: FLOAT
+  - parameter_id: test_speed2
+    display_name: Test Speed 2
+    description: Semantic definition of test speed
+    physical_quantity: velocity
+    data_type: FLOAT
+    aliases:
+      - test_speed

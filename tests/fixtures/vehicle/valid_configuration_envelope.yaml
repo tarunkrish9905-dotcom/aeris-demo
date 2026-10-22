@@ -1,0 +1,13 @@
+# Synthetic test fixture for valid configuration envelope (NOT OPERATIONAL)
+configuration_envelope:
+  configuration_id: CONF-CLEAN-01
+  vehicle_id: AC-AERO-X1
+  profile_id: PROF-AERO-01
+  profile_version: "1.0.0"
+  configuration_version: "1.0.0"
+  name: "Clean Configuration Envelope"
+  description: "Synthetic clean airframe configuration envelope."
+  source_reference: "DOC-SYNTH-CONF-01"
+  metadata:
+    flaps_deg: 0.0
+    gear: "UP"

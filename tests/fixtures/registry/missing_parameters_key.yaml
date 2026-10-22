@@ -1,0 +1,6 @@
+items:
+  - parameter_id: test_speed
+    display_name: Test Speed
+    description: Semantic definition of test speed
+    physical_quantity: velocity
+    data_type: FLOAT

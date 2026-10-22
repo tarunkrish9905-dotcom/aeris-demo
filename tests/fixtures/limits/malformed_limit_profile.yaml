@@ -1,0 +1,4 @@
+# Synthetic test fixture for malformed YAML (NOT OPERATIONAL)
+engineering_limit_profile:
+  limit_profile_id: LIM-01
+  vehicle_id: [unclosed bracket

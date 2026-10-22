@@ -1,0 +1,18 @@
+parameters:
+  - parameter_id: test_speed
+    display_name: Test Speed
+    description: Semantic definition of test speed
+    physical_quantity: velocity
+    data_type: FLOAT
+    canonical_unit: kts
+    aliases:
+      - ts
+      - spd
+  - parameter_id: test_altitude
+    display_name: Test Altitude
+    description: Semantic definition of test altitude
+    physical_quantity: distance
+    data_type: FLOAT
+    canonical_unit: ft
+    aliases:
+      - alt

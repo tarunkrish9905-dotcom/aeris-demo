@@ -1,0 +1,8 @@
+# Synthetic test fixture for limit profile with extra forbidden fields (NOT OPERATIONAL)
+engineering_limit_profile:
+  limit_profile_id: LIM-EXTRA-01
+  vehicle_id: AC-AERO-X1
+  profile_id: PROF-AERO-01
+  profile_version: "1.0.0"
+  unauthorized_extra_field: "FORBIDDEN"
+  limits: []

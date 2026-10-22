@@ -1,0 +1,62 @@
+# SYNTHETIC NON-OPERATIONAL FIXTURE FOR TESTING PURPOSES ONLY
+# NOT DERIVED FROM REAL AIRCRAFT OPERATING PROCEDURES OR ACTUAL SOP DOCUMENTS
+procedure_requirement_profile:
+  profile_id: "SYNTH-PROC-PROFILE-001"
+  document_id: "SYNTH-SOP-DOC-001"
+  document_version: "1.0.0"
+  name: "Synthetic Flight Test Procedure Requirements"
+  description: "Non-operational fixture for unit test validation"
+  source_reference: "Synthetic Test Plan Document Section 4.1"
+  vehicle_id: "SYNTH-AIRCRAFT-01"
+  profile_version: "1.0.0"
+  configuration_id: "CLEAN-CRUISE"
+  requirements:
+    - requirement_id: "SYNTH-REQ-ENTRY-ALT"
+      document_id: "SYNTH-SOP-DOC-001"
+      document_version: "1.0.0"
+      source_reference: "Section 4.1.1, Paragraph 1"
+      description: "Establish steady-state altitude prior to test point initiation"
+      category: "ENTRY_CONDITION"
+      vehicle_id: "SYNTH-AIRCRAFT-01"
+      profile_version: "1.0.0"
+      configuration_id: "CLEAN-CRUISE"
+      test_card_id: "CARD-PERF-01"
+      test_point_id: "TP-STAB-01"
+      parameter_id: "altitude"
+      target_value: 10000.0
+      tolerance: 100.0
+      unit: "ft"
+      metadata:
+        synthetic_fixture: true
+
+    - requirement_id: "SYNTH-REQ-HOLD-SPD"
+      document_id: "SYNTH-SOP-DOC-001"
+      document_version: "1.0.0"
+      source_reference: "Section 4.1.2, Paragraph 3"
+      description: "Maintain calibrated airspeed within tolerance band during test point execution"
+      category: "TOLERANCE_BAND"
+      vehicle_id: "SYNTH-AIRCRAFT-01"
+      profile_version: "1.0.0"
+      configuration_id: "CLEAN-CRUISE"
+      test_card_id: "CARD-PERF-01"
+      test_point_id: "TP-STAB-01"
+      parameter_id: "airspeed"
+      min_value: 140.0
+      max_value: 160.0
+      unit: "kts"
+      metadata:
+        synthetic_fixture: true
+
+    - requirement_id: "SYNTH-REQ-CHECK-FLAPS"
+      document_id: "SYNTH-SOP-DOC-001"
+      document_version: "1.0.0"
+      source_reference: "Section 4.1.3, Checklist Item 2"
+      description: "Verify wing flaps are set to retract/cruise position before test initiation"
+      category: "OPERATIONAL_CHECK"
+      vehicle_id: "SYNTH-AIRCRAFT-01"
+      profile_version: "1.0.0"
+      configuration_id: "CLEAN-CRUISE"
+      test_card_id: "CARD-PERF-01"
+      test_point_id: "TP-STAB-01"
+      metadata:
+        synthetic_fixture: true

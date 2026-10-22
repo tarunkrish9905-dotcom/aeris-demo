@@ -1,0 +1,58 @@
+# === Python ===
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# === Distribution / Packaging ===
+dist/
+build/
+*.egg-info/
+*.egg
+
+# === Virtual Environments ===
+.venv/
+venv/
+ENV/
+
+# === Testing / Coverage ===
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+
+# === IDE ===
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# === OS ===
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# === Ruff ===
+.ruff_cache/
+
+# === AERIS runtime artifacts ===
+# (uploads, generated reports, etc. — added when needed)
+
+# === Secrets and environment ===
+.env
+.env.*
+!.env.example
+
+# === Local databases and runtime data ===
+*.sqlite
+*.sqlite3
+*.db
+.aeris_workspace/
+uploads/
+runs/
+artifacts/
+
+# Internal development and audit reports
+AERIS_Milestone_*.md
+AERIS_Post_Milestone_*.md

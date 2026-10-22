@@ -1,0 +1,7 @@
+# Synthetic test fixture for vehicle profile with unknown extra fields (NOT OPERATIONAL)
+vehicle_profile:
+  profile_id: PROF-EXTRA-01
+  vehicle_id: AC-01
+  profile_version: "1.0.0"
+  name: "Extra Fields Profile"
+  unsupported_extra_field: "FORBIDDEN"

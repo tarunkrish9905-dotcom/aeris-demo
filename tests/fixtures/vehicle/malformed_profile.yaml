@@ -1,0 +1,4 @@
+# Synthetic test fixture for malformed vehicle profile YAML (NOT OPERATIONAL)
+vehicle_profile:
+  profile_id: PROF-01
+  vehicle_id: [unclosed bracket

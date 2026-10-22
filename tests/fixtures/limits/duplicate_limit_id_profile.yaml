@@ -1,0 +1,27 @@
+# Synthetic test fixture for limit profile with duplicate limit IDs (NOT OPERATIONAL)
+engineering_limit_profile:
+  limit_profile_id: LIM-DUP-01
+  vehicle_id: AC-AERO-X1
+  profile_id: PROF-AERO-01
+  profile_version: "1.0.0"
+  limits:
+    - limit_id: LIM-SPD-01
+      parameter_id: airspeed
+      limit_type: UPPER_BOUND
+      severity: WARNING
+      upper_bound: 250.0
+      unit: kts
+      vehicle_id: AC-AERO-X1
+      profile_id: PROF-AERO-01
+      profile_version: "1.0.0"
+      source_reference: "AFM-SYNTH"
+    - limit_id: LIM-SPD-01
+      parameter_id: airspeed
+      limit_type: UPPER_BOUND
+      severity: CAUTION
+      upper_bound: 220.0
+      unit: kts
+      vehicle_id: AC-AERO-X1
+      profile_id: PROF-AERO-01
+      profile_version: "1.0.0"
+      source_reference: "AFM-SYNTH"

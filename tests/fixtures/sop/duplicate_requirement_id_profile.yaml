@@ -1,0 +1,25 @@
+# SYNTHETIC NON-OPERATIONAL FIXTURE WITH DUPLICATE REQUIREMENT IDENTIFIERS
+procedure_requirement_profile:
+  profile_id: "SYNTH-DUP-PROFILE"
+  document_id: "SYNTH-SOP-001"
+  document_version: "1.0.0"
+  requirements:
+    - requirement_id: "SYNTH-REQ-DUP-01"
+      document_id: "SYNTH-SOP-001"
+      document_version: "1.0.0"
+      source_reference: "Section 1.1"
+      description: "First instance of requirement"
+      category: "ENTRY_CONDITION"
+      parameter_id: "altitude"
+      target_value: 5000.0
+      unit: "ft"
+
+    - requirement_id: "SYNTH-REQ-DUP-01"
+      document_id: "SYNTH-SOP-001"
+      document_version: "1.0.0"
+      source_reference: "Section 1.2"
+      description: "Duplicate identifier requirement"
+      category: "ENTRY_CONDITION"
+      parameter_id: "altitude"
+      target_value: 6000.0
+      unit: "ft"

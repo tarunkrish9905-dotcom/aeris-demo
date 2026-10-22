@@ -1,0 +1,6 @@
+# SYNTHETIC NON-OPERATIONAL FIXTURE MISSING REQUIRED DOCUMENT_ID
+procedure_requirement_profile:
+  profile_id: "SYNTH-MISSING-DOC"
+  # document_id is deliberately omitted
+  document_version: "1.0.0"
+  requirements: []

@@ -1,0 +1,15 @@
+# Synthetic test fixture for valid vehicle profile (NOT OPERATIONAL)
+vehicle_profile:
+  profile_id: PROF-AERO-01
+  vehicle_id: AC-AERO-X1
+  profile_version: "1.0.0"
+  name: "Synthetic Aero Testbed Profile"
+  description: "Synthetic vehicle profile for automated testing."
+  source_reference: "DOC-SYNTH-2026-01"
+  supported_parameter_ids:
+    - airspeed
+    - altitude
+    - pitch_rate
+  metadata:
+    synthetic: true
+    airframe_class: "experimental"

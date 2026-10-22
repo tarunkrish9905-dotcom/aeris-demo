@@ -1,0 +1,98 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aeris"
+version = "0.1.0"
+description = "Post-flight, vehicle-aware, SOP-referenced flight-test analysis and engineering decision-support platform."
+requires-python = ">=3.11"
+license = {text = "Proprietary"}
+
+# Core dependencies — only what Milestone 1 requires
+dependencies = [
+    "pandas>=2.0",
+    "numpy>=1.24",
+    "pydantic>=2.0",
+    "pyyaml>=6.0",
+    "plotly>=5.18.0",
+    "fastapi>=0.110.0",
+    "uvicorn>=0.28.0",
+    "python-multipart>=0.0.9",
+    "dash>=2.16.0",
+    "dash-bootstrap-components>=1.6.0",
+    "a2wsgi>=1.10.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "ruff>=0.4",
+    "mypy>=1.0",
+    "pandas-stubs>=2.0",
+    "httpx>=0.27.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+# === Pytest Configuration ===
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-v --tb=short"
+
+# === Ruff Configuration ===
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+src = ["src", "tests", "scripts"]
+
+[tool.ruff.lint]
+select = [
+    "E",    # pycodestyle errors
+    "W",    # pycodestyle warnings
+    "F",    # pyflakes
+    "I",    # isort
+    "N",    # pep8-naming
+    "UP",   # pyupgrade
+    "B",    # flake8-bugbear
+    "SIM",  # flake8-simplify
+    "RUF",  # ruff-specific rules
+]
+
+[tool.ruff.lint.flake8-bugbear]
+extend-immutable-calls = ["fastapi.Depends", "fastapi.Query", "fastapi.File", "fastapi.Form", "Depends", "Query", "File", "Form"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["aeris"]
+
+# === Mypy Configuration ===
+[tool.mypy]
+python_version = "3.12"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+packages = ["aeris"]
+mypy_path = "src"
+
+[[tool.mypy.overrides]]
+module = [
+    "plotly",
+    "plotly.*",
+    "dash",
+    "dash.*",
+    "dash_bootstrap_components",
+    "a2wsgi",
+    "a2wsgi.*",
+]
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = [
+    "aeris.frontend.*",
+]
+warn_return_any = false

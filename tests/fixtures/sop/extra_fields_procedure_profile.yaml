@@ -1,0 +1,7 @@
+# SYNTHETIC NON-OPERATIONAL FIXTURE WITH FORBIDDEN EXTRA FIELDS
+procedure_requirement_profile:
+  profile_id: "SYNTH-EXTRA-FIELDS"
+  document_id: "SYNTH-SOP-001"
+  document_version: "1.0.0"
+  unregistered_extra_field: "this_should_be_forbidden"
+  requirements: []
