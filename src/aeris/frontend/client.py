@@ -7,6 +7,7 @@ interact with the AERIS FastAPI backend service.
 
 from __future__ import annotations
 
+import os
 import re
 from typing import Any
 
@@ -59,7 +60,7 @@ class AerisApiClient:
 
     def __init__(
         self,
-        base_url: str = "http://127.0.0.1:8000/api/v1",
+        base_url: str = os.environ.get("AERIS_API_BASE_URL", "http://127.0.0.1:8000/api/v1"),
         timeout: float = 10.0,
         client: httpx.Client | None = None,
     ) -> None:
@@ -432,3 +433,4 @@ class AerisApiClient:
             self._handle_response(resp)
         content_type = resp.headers.get("content-type", "application/octet-stream")
         return resp.content, content_type
+
